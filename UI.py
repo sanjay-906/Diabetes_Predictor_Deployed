@@ -7,6 +7,7 @@ Created on Wed Oct  5 16:33:49 2022
 
 import numpy as np
 import pickle
+import sklearn
 import streamlit as sl
 
 pickle_in=open("logreg.sav","rb")
