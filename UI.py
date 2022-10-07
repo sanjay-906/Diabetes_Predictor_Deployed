@@ -18,7 +18,7 @@ model2=pickle.load(pickle_in)
 def compute(input_values):
     scaler=StandardScaler()
     pred_array=np.asarray(input_values).reshape(1,-1)
-    data=scaler.transform(pred_array)
+    data=scaler.fit_transform(pred_array)
     predictions=model2.predict(data)
     if(predictions[0]==1):
         return "High chance of getting diabetes"
