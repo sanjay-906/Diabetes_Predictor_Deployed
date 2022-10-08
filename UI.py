@@ -12,14 +12,13 @@ import streamlit as sl
 from sklearn.preprocessing import StandardScaler
 
 
-pickle_in=open("logreg.sav","rb")
+pickle_in=open("logregwithoutstd.sav","rb")
 model2=pickle.load(pickle_in)
 
 def compute(input_values):
-    scaler=StandardScaler()
+    
     pred_array=np.asarray(input_values).reshape(1,-1)
-    data=scaler.transform(pred_array)
-    predictions=model2.predict(data)
+    predictions=model2.predict(pred_array)
     if(predictions[0]==1):
         return "High chance of getting diabetes"
     else:
