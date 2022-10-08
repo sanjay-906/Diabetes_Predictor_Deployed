@@ -9,7 +9,7 @@ import numpy as np
 import pickle
 import sklearn
 import streamlit as sl
-from sklearn.preprocessing import StandardScaler
+
 
 
 pickle_in=open("logregwithoutstd.sav","rb")
